@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".main"/>
+        <activity android:name=".educationgame"/>
+        <activity android:name=".flashcards"/>
+        <activity android:name=".quizzes"/>
     </application>
 
 </manifest>

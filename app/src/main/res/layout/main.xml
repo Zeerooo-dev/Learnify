@@ -10,22 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="120dp"
-        android:layout_gravity="center"
         >
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center"
             >
-
-
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="230dp"
+                android:layout_width="60dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="210dp"
                 />
-
             <TextView
                 android:id="@+id/home"
                 android:layout_width="wrap_content"
