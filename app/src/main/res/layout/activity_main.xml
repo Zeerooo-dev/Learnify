@@ -12,24 +12,25 @@
 
     <TextView
         android:id="@+id/welcome"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        android:text="Welcome to Learnify!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:textSize="40dp"
+        android:text="Hello"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:textColor="@color/black"
         />
 
     <TextView
         android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:text="Welcome Back!"
+        android:text="Hello, Welcome Back!"
         android:textColor="@color/black"
         />
 
@@ -52,14 +53,14 @@
                 android:id="@+id/editTextTextEmailAddress"
 
 
-                android:layout_width="200dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_gradient"
                 android:ems="10"
                 android:hint="Enter Username"
                 android:inputType="textEmailAddress"
-                android:padding="5dp"
-                android:textSize="18dp" />
+                android:padding="10dp"
+                android:textSize="10dp" />
 
 
             <Space
@@ -74,8 +75,18 @@
                 android:ems="10"
                 android:hint="Enter Password"
                 android:inputType="text"
-                android:padding="5dp"
-                android:textSize="18dp" />
+                android:padding="10dp"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textSize="10dp"
+                android:textColor="@color/red"
+                android:layout_marginTop="20dp"
+                android:gravity="right"/>
+
 
             <Button
                 android:id="@+id/login_btn"
