@@ -34,10 +34,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="233dp"
-        android:layout_gravity="center"
+        android:layout_height="290dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:elevation="50dp"
+        android:padding="200px"
         app:cardCornerRadius="30dp">
 
         <LinearLayout
@@ -46,11 +46,20 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="Username"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"/>
+
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
-
-
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_gradient"
@@ -58,12 +67,24 @@
                 android:hint="Enter Username"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:elevation="5dp"/>
 
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="Password"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"/>
 
             <EditText
                 android:id="@+id/editTextPassword"
@@ -74,12 +95,13 @@
                 android:hint="Enter Password"
                 android:inputType="text"
                 android:padding="10dp"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:elevation="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="right"
                 android:text="Forgot Password?"
                 android:textColor="@color/red"
@@ -97,8 +119,33 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
-
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/DontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Don't have an account?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/SignUpLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up"
+        android:textColor="@color/black" />
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/loginshape"/>
 
 </LinearLayout>
