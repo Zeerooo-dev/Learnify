@@ -16,6 +16,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     EditText editTextTextEmailAddress, editTextPassword;
     Button login_btn;
+
+    String user_pass = "admin123";
+    String user_email = "admin";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     editTextPassword.setError("This field cannot be empty");
 
                     }else {
-                        if(editTextTextEmailAddress.getText().toString().toLowerCase().equals("admin")&&editTextPassword.getText().toString().toLowerCase().equals("admin123")){
+                        if(editTextTextEmailAddress.getText().toString().equals(user_email)&&editTextPassword.getText().toString().equals(user_pass)){
                             Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(MainActivity.this, main.class));
                         }else {
