@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,24 @@ public class MainActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, main.class));
+                if(editTextTextEmailAddress.getText().toString().isEmpty()){
+                    editTextTextEmailAddress.setError("This field cannot be empty");
+
+                }if (editTextPassword.getText().toString().isEmpty()) {
+                    editTextPassword.setError("This field cannot be empty");
+
+                    }else {
+                        if(editTextTextEmailAddress.getText().toString().toLowerCase().equals("admin")&&editTextPassword.getText().toString().toLowerCase().equals("admin123")){
+                            Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, main.class));
+                        }else {
+                            editTextTextEmailAddress.setError("Incorrect Password");
+                            editTextPassword.setError("Incorrect Password");
+                            Toast.makeText(MainActivity.this, "Username or Password is Incorrect", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                }
             }
         });
 
