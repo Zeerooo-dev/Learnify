@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Try2"
         tools:targetApi="31">
         <activity
+            android:name=".quizpage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,10 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main"/>
-        <activity android:name=".educationgame"/>
-        <activity android:name=".flashcards"/>
-        <activity android:name=".quizzes"/>
+        <activity android:name=".main" />
+        <activity android:name=".science" />
+        <activity android:name=".math" />
+        <activity android:name=".english" />
+        <activity android:name=".welcomepage" />
     </application>
 
 </manifest>
