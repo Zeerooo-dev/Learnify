@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +8,12 @@
     android:orientation="vertical"
     android:background="@drawable/bg_gradient">
 
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/loginshape"
+        />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -64,21 +70,32 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="70dp"
+        android:text="What time is it?"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
 
     <ImageView
         android:layout_width="350dp"
         android:layout_height="61dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/quiztime" />
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/quiztime"/>
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/l_mathtile"
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="380dp"
         app:cardBackgroundColor="@color/red"
         app:cardCornerRadius="30dp">
 
@@ -149,8 +166,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="200dp"
         app:cardBackgroundColor="@color/blue2"
         app:cardCornerRadius="30dp">
 
@@ -216,8 +233,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
         app:cardBackgroundColor="@color/yellow"
         app:cardCornerRadius="30dp">
 
@@ -280,4 +297,4 @@
                 android:src="@drawable/englishicon" />
         </FrameLayout>
     </androidx.cardview.widget.CardView>
-</LinearLayout>
+</FrameLayout>
