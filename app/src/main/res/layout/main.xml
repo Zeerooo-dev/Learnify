@@ -70,23 +70,12 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:gravity="center_horizontal|center_vertical"
-        android:layout_marginTop="70dp"
-        android:text="What time is it?"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="13sp"/>
-
     <ImageView
         android:layout_width="350dp"
         android:layout_height="61dp"
-        android:layout_gravity="top|center_horizontal"
+        android:layout_gravity="center|center_horizontal"
         android:gravity="center_horizontal|center_vertical"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="250dp"
         android:src="@drawable/quiztime"/>
 
 
@@ -94,8 +83,8 @@
         android:id="@+id/l_mathtile"
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="380dp"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginBottom="100dp"
         app:cardBackgroundColor="@color/red"
         app:cardCornerRadius="30dp">
 
@@ -166,8 +155,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="200dp"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginTop="80dp"
         app:cardBackgroundColor="@color/blue2"
         app:cardCornerRadius="30dp">
 
@@ -233,8 +222,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginTop="260dp"
         app:cardBackgroundColor="@color/yellow"
         app:cardCornerRadius="30dp">
 
