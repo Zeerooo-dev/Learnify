@@ -134,6 +134,7 @@
                 android:layout_gravity="left"
                 android:background="@drawable/btn_gradientwhite"
                 android:text="Take Quiz"
+                android:elevation="100dp"
                 android:textColor="@color/red"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
