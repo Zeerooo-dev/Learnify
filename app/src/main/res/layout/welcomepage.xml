@@ -63,7 +63,7 @@
 
 
     <ImageView
-        android:id="@+id/mathicon"
+        android:id="@+id/welcomeicon"
         android:layout_width="337dp"
         android:layout_height="282dp"
         android:layout_gravity="center"
@@ -81,7 +81,7 @@
         android:layout_marginTop="190dp"/>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/startbtn"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
