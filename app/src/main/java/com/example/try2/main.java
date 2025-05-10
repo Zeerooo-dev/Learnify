@@ -3,6 +3,8 @@ package com.example.try2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,8 +17,10 @@ public class main extends AppCompatActivity {
     Button l_science, l_math, l_english;
     public static String text;
     TextView home, settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.main);
@@ -40,21 +44,21 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main.this, welcomepage.class));
-                text = "science";
+                text = "Science";
             }
         });
         l_math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main.this, welcomepage.class));
-                text = "math";
+                text = "Math";
             }
         });
         l_english.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main.this, welcomepage.class));
-                text = "englsih";
+                text = "English";
             }
         });
     }

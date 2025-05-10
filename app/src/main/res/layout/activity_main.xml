@@ -13,18 +13,17 @@
         android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:src="@drawable/loginshape"
-        />
+        android:src="@drawable/loginshape" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo2"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo2" />
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -36,7 +35,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -51,7 +50,6 @@
         android:layout_height="290dp"
         android:layout_gravity="center"
         android:layout_marginTop="60dp"
-        android:padding="200px"
         app:cardCornerRadius="30dp">
 
         <LinearLayout
@@ -59,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical">
+
 
             <TextView
                 android:layout_width="match_parent"
