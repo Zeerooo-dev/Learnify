@@ -17,7 +17,6 @@ public class math extends AppCompatActivity {
     TextView question, choice1,choice2, choice3, choice4, q_text;
     TextView home, settings;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

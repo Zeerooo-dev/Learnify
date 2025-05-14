@@ -1,6 +1,7 @@
 package com.example.try2;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -16,7 +17,6 @@ public class science extends AppCompatActivity {
     TextView home, settings;
     public static int sci_score = 0;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,76 +50,76 @@ public class science extends AppCompatActivity {
 
 
 
-        choice1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice4.setBackground(getResources().getDrawable(R.drawable.anscorrect));
-                choice1.setBackground(getResources().getDrawable(R.drawable.answrong));
-                choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+    choice1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice1.setBackground(getResources().getDrawable(R.drawable.answrong));
+            choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+            choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
-                choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.white));
-                choice4.setTextColor(getResources().getColor(R.color.black));
+            choice2.setTextColor(getResources().getColor(R.color.black));
+            choice3.setTextColor(getResources().getColor(R.color.white));
+            choice4.setTextColor(getResources().getColor(R.color.white));
+            q_text.setText("Incorrect!");
+        }
+    });
+    choice2.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            //Text Background
+            choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+            choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+
+            //Text Color
+            choice3.setTextColor(getResources().getColor(R.color.white));
+            choice2.setTextColor(getResources().getColor(R.color.black));
+            choice4.setTextColor(getResources().getColor(R.color.white));
+            q_text.setText("Correct!");
+            if (sci_score <= 1) {
+                sci_score++;
             }
-        });
-        choice2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice4.setBackground(getResources().getDrawable(R.drawable.anscorrect));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice2.setBackground(getResources().getDrawable(R.drawable.answrong));
-                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
-                choice3.setTextColor(getResources().getColor(R.color.white));
-                choice2.setTextColor(getResources().getColor(R.color.white));
-                choice4.setTextColor(getResources().getColor(R.color.black));
+        }
+    });
+    choice3.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+            choice3.setBackground(getResources().getDrawable(R.drawable.answrong));
 
-            }
-        });
-        choice3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice4.setBackground(getResources().getDrawable(R.drawable.anscorrect));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.answrong));
+            choice2.setTextColor(getResources().getColor(R.color.black));
+            choice3.setTextColor(getResources().getColor(R.color.white));
+            choice4.setTextColor(getResources().getColor(R.color.white));
+            q_text.setText("Incorrect!");
+        }
+    });
+    choice4.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            choice4.setBackground(getResources().getDrawable(R.drawable.answrong));
+            choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+            choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
-                choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.white));
-                choice4.setTextColor(getResources().getColor(R.color.black));
-            }
-        });
-        choice4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice4.setBackground(getResources().getDrawable(R.drawable.anscorrect));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+            choice2.setTextColor(getResources().getColor(R.color.black));
+            choice3.setTextColor(getResources().getColor(R.color.white));
+            choice4.setTextColor(getResources().getColor(R.color.white));
+            q_text.setText("Incorrect!");
 
-                choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.white));
-                choice4.setTextColor(getResources().getColor(R.color.black));
-                if (sci_score <= 1){
-                    sci_score++;
-                    sci_score+=sci_score;
-                }
-            }
-        });
-        sci_next1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        }
+    });
 
-            }
-        });
-
-
-
-
-
-
-
+    sci_next1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(science.this, science2.class));
+        }
+    });
 
     }
 }
