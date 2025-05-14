@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextTextEmailAddress = (EditText) findViewById(R.id.editTextTextEmailAddress);
         login_btn = (Button) findViewById(R.id.login_btn);

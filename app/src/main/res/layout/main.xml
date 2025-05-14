@@ -199,7 +199,7 @@
                 android:layout_height="30dp" />
 
             <Button
-                android:id="@+id/l_english"
+                android:id="@+id/l_science"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -266,7 +266,7 @@
                     android:layout_height="30dp" />
 
                 <Button
-                    android:id="@+id/l_science"
+                    android:id="@+id/l_english"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"

@@ -63,11 +63,10 @@
 
 
     <ImageView
-        android:id="@+id/welcomeicon"
         android:layout_width="337dp"
         android:layout_height="282dp"
         android:layout_gravity="center"
-        android:src="@drawable/mathicon" />
+        android:src="@drawable/scienceicon" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,7 +80,7 @@
         android:layout_marginTop="190dp"/>
 
     <Button
-        android:id="@+id/startbtn"
+        android:id="@+id/sci_startbtn"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
@@ -95,14 +94,13 @@
 
 
     <TextView
-        android:id="@+id/texttest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
         android:layout_marginTop="100dp"
         android:clickable="true"
         android:gravity="center"
-        android:text="HELLO"
+        android:text="SCIENCE"
         android:textColor="@color/black"
         android:textSize="80dp"
         android:textStyle="bold" />

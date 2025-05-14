@@ -3,10 +3,7 @@ package com.example.try2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -43,21 +40,21 @@ public class main extends AppCompatActivity {
         l_science.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main.this, welcomepage.class));
+                startActivity(new Intent(main.this, sciencewelcomepage2.class));
                 text = "Science";
             }
         });
         l_math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main.this, welcomepage.class));
+                startActivity(new Intent(main.this, mathwelcomepage.class));
                 text = "Math";
             }
         });
         l_english.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main.this, welcomepage.class));
+                startActivity(new Intent(main.this, englishwelcomepage3.class));
                 text = "English";
             }
         });

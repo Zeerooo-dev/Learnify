@@ -1,6 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".sciencewelcomepage2">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/orange"
+        android:elevation="100dp"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:text="Home"/>
+            <TextView
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="Settings"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_marginTop="30dp"
+        android:layout_width="370dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="question"/>
+    <TextView
+        android:id="@+id/q_text"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Choose an Answer"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+
+        >
+        <TextView
+            android:id="@+id/choice1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/c1"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="choice1" />
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            />
+        <TextView
+            android:id="@+id/choice2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/c2"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:text="choice2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/choice3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/c3"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:text="choice3" />
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            />
+        <TextView
+            android:id="@+id/choice4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@drawable/c4"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="choice4" />
+    </LinearLayout>
+
 
 </LinearLayout>
