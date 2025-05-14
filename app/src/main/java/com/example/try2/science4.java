@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class science4 extends AppCompatActivity {
     TextView question, choice1,choice2, choice3, choice4, q_text, sci_next4, sci_back3;
     TextView home, settings;
+    boolean answered = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -53,6 +54,8 @@ public class science4 extends AppCompatActivity {
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (answered) return;
+                answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice1.setBackground(getResources().getDrawable(R.drawable.answrong));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
@@ -67,13 +70,15 @@ public class science4 extends AppCompatActivity {
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (answered) return;
+                answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice2.setBackground(getResources().getDrawable(R.drawable.answrong));
                 choice3.setBackground(getResources().getDrawable(R.drawable.anscorrect));
 
-                choice3.setTextColor(getResources().getColor(R.color.black));
                 choice2.setTextColor(getResources().getColor(R.color.white));
+                choice3.setTextColor(getResources().getColor(R.color.black));
                 choice4.setTextColor(getResources().getColor(R.color.white));
                 q_text.setText("Incorrect!");
 
@@ -82,6 +87,8 @@ public class science4 extends AppCompatActivity {
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (answered) return;
+                answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
@@ -100,6 +107,8 @@ public class science4 extends AppCompatActivity {
         choice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (answered) return;
+                answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.answrong));
                 choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
