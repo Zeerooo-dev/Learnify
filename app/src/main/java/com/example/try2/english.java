@@ -36,15 +36,14 @@ public class english extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                finish();
+                startActivity(new Intent(english.this, main.class));
             }
 
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(english.this, MainActivity.class));
             }
         });
 

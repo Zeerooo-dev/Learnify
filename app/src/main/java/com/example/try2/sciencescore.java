@@ -31,7 +31,7 @@ public class sciencescore extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(sciencescore.this, MainActivity.class));
             }
         });
 

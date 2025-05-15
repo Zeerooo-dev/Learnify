@@ -13,6 +13,36 @@
         android:theme="@style/Theme.Try2"
         tools:targetApi="31">
         <activity
+            android:name=".englishscore"
+            android:exported="false" />
+        <activity
+            android:name=".english5"
+            android:exported="false" />
+        <activity
+            android:name=".english4"
+            android:exported="false" />
+        <activity
+            android:name=".english3"
+            android:exported="false" />
+        <activity
+            android:name=".english2"
+            android:exported="false" />
+        <activity
+            android:name=".mathscore"
+            android:exported="false" />
+        <activity
+            android:name=".math5"
+            android:exported="false" />
+        <activity
+            android:name=".math4"
+            android:exported="false" />
+        <activity
+            android:name=".math3"
+            android:exported="false" />
+        <activity
+            android:name=".math2"
+            android:exported="false" />
+        <activity
             android:name=".sciencescore"
             android:exported="false" />
         <activity

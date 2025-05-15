@@ -34,7 +34,7 @@ public class sciencewelcomepage2 extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(sciencewelcomepage2.this, MainActivity.class));
             }
         });
         sci_startbtn.setOnClickListener(new View.OnClickListener() {

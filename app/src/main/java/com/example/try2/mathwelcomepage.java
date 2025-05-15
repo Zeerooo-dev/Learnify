@@ -28,13 +28,13 @@ public class mathwelcomepage extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(mathwelcomepage.this, main.class));
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(mathwelcomepage.this, MainActivity.class));
             }
         });
         mth_startbtn.setOnClickListener(new View.OnClickListener() {

@@ -13,10 +13,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class math extends AppCompatActivity {
-    public static String q_text1;
-    TextView question, choice1,choice2, choice3, choice4, q_text;
+    TextView question, choice1,choice2, choice3, choice4, q_text, mth_next1;
     TextView home, settings;
+    public static int mth_score = 0;
+    boolean answered = false;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,19 +33,20 @@ public class math extends AppCompatActivity {
         choice3 = (TextView) findViewById(R.id.choice3);
         choice4 = (TextView) findViewById(R.id.choice4);
         q_text = (TextView) findViewById(R.id.q_text);
+        mth_next1 = (TextView) findViewById(R.id.mth_next1);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                finish();
+                startActivity(new Intent(math.this, main.class));
             }
 
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(math.this, MainActivity.class));
             }
         });
 
@@ -52,58 +55,81 @@ public class math extends AppCompatActivity {
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                q_text1 = "Tap to Reveal Answer";
-                q_text.setText(q_text1);
+                if (answered) return;
+                answered = true;
+                choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.answrong));
+                choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+
+                choice2.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
+                choice4.setTextColor(getResources().getColor(R.color.white));
+                q_text.setText("Incorrect!");
             }
         });
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                q_text1 = "Tap to Reveal Answer";
-                q_text.setText(q_text1);
+                if (answered) return;
+                answered = true;
+                //Text Background
+                choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+
+                //Text Color
+                choice2.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
+                choice4.setTextColor(getResources().getColor(R.color.white));
+                q_text.setText("Correct!");
+                if (mth_score <= 1) {
+                    mth_score++;
+                }
+
             }
         });
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                q_text1 = "Tap to Reveal Answer";
-                q_text.setText(q_text1);
+                if (answered) return;
+                answered = true;
+                choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.answrong));
 
+                choice2.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
+                choice4.setTextColor(getResources().getColor(R.color.white));
+                q_text.setText("Incorrect!");
             }
         });
         choice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                q_text1 = "Tap to Reveal Answer";
-                q_text.setText(q_text1);
+                if (answered) return;
+                answered = true;
+                choice4.setBackground(getResources().getDrawable(R.drawable.answrong));
+                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice2.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
+
+                choice2.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
+                choice4.setTextColor(getResources().getColor(R.color.white));
+                q_text.setText("Incorrect!");
+
             }
         });
-        q_text.setOnClickListener(new View.OnClickListener() {
+
+        mth_next1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(math.this, math2.class));
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }

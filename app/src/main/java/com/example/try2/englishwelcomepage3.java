@@ -28,13 +28,13 @@ public class englishwelcomepage3 extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(englishwelcomepage3.this, main.class));
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(englishwelcomepage3.this, MainActivity.class));
             }
         });
         eng_startbtn.setOnClickListener(new View.OnClickListener() {

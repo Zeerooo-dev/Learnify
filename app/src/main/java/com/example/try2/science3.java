@@ -38,14 +38,14 @@ public class science3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                finish();
+                startActivity(new Intent(science3.this, main.class));
             }
 
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(science3.this, MainActivity.class));
             }
         });
 

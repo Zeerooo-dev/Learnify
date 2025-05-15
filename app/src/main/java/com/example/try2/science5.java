@@ -39,14 +39,14 @@ public class science5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                finish();
+                startActivity(new Intent(science5.this, main.class));
             }
 
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(science5.this, MainActivity.class));
             }
         });
 
@@ -99,7 +99,7 @@ public class science5 extends AppCompatActivity {
                 choice3.setTextColor(getResources().getColor(R.color.black));
                 choice4.setTextColor(getResources().getColor(R.color.white));
                 q_text.setText("Correct!");
-                if (science.sci_score <= 5){
+                if (science.sci_score < 5){
                     science.sci_score++;
 
                 }

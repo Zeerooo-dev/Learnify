@@ -12,8 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class science4 extends AppCompatActivity {
-    TextView question, choice1,choice2, choice3, choice4, q_text, sci_next4, sci_back3;
+public class math5 extends AppCompatActivity {
+    TextView question, choice1,choice2, choice3, choice4, q_text, mth_next5, mth_back4;
     TextView home, settings;
     boolean answered = false;
 
@@ -22,7 +22,7 @@ public class science4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.science4);
+        setContentView(R.layout.math3);
         home = (TextView) findViewById(R.id.home);
         settings = (TextView) findViewById(R.id.settings);
 
@@ -32,20 +32,21 @@ public class science4 extends AppCompatActivity {
         choice3 = (TextView) findViewById(R.id.choice3);
         choice4 = (TextView) findViewById(R.id.choice4);
         q_text = (TextView) findViewById(R.id.q_text);
-        sci_next4 = (TextView) findViewById(R.id.sci_next4);
-        sci_back3 = (TextView) findViewById(R.id.sci_back3);
+        mth_next5 = (TextView) findViewById(R.id.mth_next5);
+        mth_back4 = (TextView) findViewById(R.id.mth_back4);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(science4.this, main.class));
+                startActivity(new Intent(math5.this, main.class));
             }
 
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(science4.this, MainActivity.class));
+                startActivity(new Intent(math5.this, MainActivity.class));
             }
         });
 
@@ -98,8 +99,8 @@ public class science4 extends AppCompatActivity {
                 choice3.setTextColor(getResources().getColor(R.color.black));
                 choice4.setTextColor(getResources().getColor(R.color.white));
                 q_text.setText("Correct!");
-                if (science.sci_score <= 4){
-                    science.sci_score++;
+                if (math.mth_score < 5){
+                    math.mth_score++;
 
                 }
             }
@@ -121,16 +122,19 @@ public class science4 extends AppCompatActivity {
 
             }
         });
-        sci_back3.setOnClickListener(new View.OnClickListener() {
+
+        mth_back4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        sci_next4.setOnClickListener(new View.OnClickListener() {
+
+
+        mth_next5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(science4.this, science5.class));
+                startActivity(new Intent(math5.this, mathscore.class));
             }
         });
 
