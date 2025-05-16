@@ -72,8 +72,7 @@
         android:background="@drawable/border"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text="What type of bond involves the
-        sharing of electron pairs between atoms?
+        android:text="Solve the following equation. \n\n2x + 3y = 13\n5x - y = 7
 "/>
     <TextView
         android:id="@+id/q_text"
@@ -101,7 +100,7 @@
             android:background="@drawable/c1"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="Ionic bond" />
+            android:text="x = 1\ny = 4" />
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
@@ -114,7 +113,7 @@
             android:background="@drawable/c2"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="Metallic bond" />
+            android:text="x = 2\ny = 3" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -134,7 +133,7 @@
             android:background="@drawable/c3"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="Hydrogen bond" />
+            android:text="x = 3\ny = 2" />
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
@@ -147,7 +146,7 @@
             android:background="@drawable/c4"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="Covalent bond" />
+            android:text="x = 4\ny = 1" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
