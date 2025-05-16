@@ -23,6 +23,7 @@ public class science extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.science);
+        science.sci_score = 0;
         home = (TextView) findViewById(R.id.home);
         settings = (TextView) findViewById(R.id.settings);
 

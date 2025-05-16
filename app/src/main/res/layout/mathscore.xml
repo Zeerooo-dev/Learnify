@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".sciencescore">
+    tools:context=".mathscore">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:elevation="200dp"
@@ -67,7 +67,7 @@
         android:gravity="center"
         android:layout_marginTop="40dp"
         android:textColor="@color/black"
-        android:text="Congratulations You Have Finished The \n Science Quiz!" />
+        android:text="Congratulations You Have Finished The \n Math Quiz!" />
 
     <TextView
         android:layout_width="match_parent"

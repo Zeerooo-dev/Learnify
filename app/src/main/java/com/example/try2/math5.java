@@ -22,7 +22,7 @@ public class math5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.math3);
+        setContentView(R.layout.math5);
         home = (TextView) findViewById(R.id.home);
         settings = (TextView) findViewById(R.id.settings);
 

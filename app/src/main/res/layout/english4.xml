@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".english2">
+    tools:context=".english4">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:elevation="200dp"
@@ -72,7 +72,7 @@
         android:background="@drawable/border"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text="What is the synonym of the word GENEROUS"/>
+        android:text= "Identify the type of sentence: If you study hard, you will pass the exam."/>
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -91,15 +91,17 @@
         android:layout_gravity="center"
 
         >
+
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:gravity="center"
             android:background="@drawable/c1"
             android:clickable="true"
-            android:textColor="@color/white"
-            android:text="Mean" />
+            android:gravity="center"
+            android:text="Interrogative"
+            android:textColor="@color/white" />
+
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
@@ -112,7 +114,7 @@
             android:background="@drawable/c2"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="Selfish" />
+            android:text="Imperative" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -132,7 +134,7 @@
             android:background="@drawable/c3"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="Kind" />
+            android:text="Conditional" />
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
@@ -145,14 +147,14 @@
             android:background="@drawable/c4"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="Rude" />
+            android:text="Exclamatory" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/eng_back1"
+            android:id="@+id/eng_back3"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_gravity="right"
@@ -165,7 +167,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/eng_next2"
+            android:id="@+id/eng_next4"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:clickable="true"

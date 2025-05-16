@@ -43,17 +43,17 @@ public class mathscore extends AppCompatActivity {
         mthfinal_score.setText(String.valueOf(math.mth_score + "/5"));
 
         if (math.mth_score == 5){
-            mthfinal_score.setText("Perfect! Too Ez 😁");
+            mthscore_comment.setText("Perfect! Too Ez 😁");
         }else if(math.mth_score == 4){
-            mthfinal_score.setText("One more and it's perfect 😄");
+            mthscore_comment.setText("One more and it's perfect 😄");
         }else if(math.mth_score == 3){
-            mthfinal_score.setText("Not Bad! You’re getting there 😲");
+            mthscore_comment.setText("Not Bad! You’re getting there 😲");
         }else if(math.mth_score == 2){
-            mthfinal_score.setText("You’re Learning. Try again and Improve 🫤");
+            mthscore_comment.setText("You’re Learning. Try again and Improve 🫤");
         }else if(math.mth_score == 1){
-            mthfinal_score.setText("Keep Going! But you MIGHT be dumb 😞");
+            mthscore_comment.setText("Keep Going! But you MIGHT be dumb 😞");
         }else if(math.mth_score == 0){
-            mthfinal_score.setText("💀💀💀💀💀");
+            mthscore_comment.setText("💀💀💀💀💀");
         }
 
 

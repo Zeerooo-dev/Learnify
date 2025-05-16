@@ -24,6 +24,7 @@ public class math extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.math);
+        math.mth_score = 0;
         home = (TextView) findViewById(R.id.home);
         settings = (TextView) findViewById(R.id.settings);
 
