@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +22,8 @@ public class math4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         EdgeToEdge.enable(this);
         setContentView(R.layout.math4);
         home = (TextView) findViewById(R.id.home);
@@ -58,14 +61,18 @@ public class math4 extends AppCompatActivity {
                 if (answered) return;
                 answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice1.setBackground(getResources().getDrawable(R.drawable.answrong));
+                choice1.setBackground(getResources().getDrawable(R.drawable.anscorrect));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
                 choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
                 choice4.setTextColor(getResources().getColor(R.color.white));
-                q_text.setText("Incorrect!");
+                q_text.setText("Correct!");
+                if (math.mth_score <= 4){
+                    math.mth_score++;
+
+                }
             }
         });
         choice2.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +81,12 @@ public class math4 extends AppCompatActivity {
                 if (answered) return;
                 answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.anscorrect));
                 choice2.setBackground(getResources().getDrawable(R.drawable.answrong));
-                choice3.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
                 choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
                 choice4.setTextColor(getResources().getColor(R.color.white));
                 q_text.setText("Incorrect!");
 
@@ -91,18 +98,15 @@ public class math4 extends AppCompatActivity {
                 if (answered) return;
                 answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.anscorrect));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.answrong));
 
                 choice2.setTextColor(getResources().getColor(R.color.white));
-                choice3.setTextColor(getResources().getColor(R.color.black));
+                choice3.setTextColor(getResources().getColor(R.color.white));
                 choice4.setTextColor(getResources().getColor(R.color.white));
-                q_text.setText("Correct!");
-                if (math.mth_score <= 4){
-                    math.mth_score++;
+                q_text.setText("Incorrect!");
 
-                }
             }
         });
         choice4.setOnClickListener(new View.OnClickListener() {
@@ -111,9 +115,9 @@ public class math4 extends AppCompatActivity {
                 if (answered) return;
                 answered = true;
                 choice4.setBackground(getResources().getDrawable(R.drawable.answrong));
-                choice1.setBackground(getResources().getDrawable(R.drawable.ansgray));
+                choice1.setBackground(getResources().getDrawable(R.drawable.anscorrect));
                 choice2.setBackground(getResources().getDrawable(R.drawable.ansgray));
-                choice3.setBackground(getResources().getDrawable(R.drawable.anscorrect));
+                choice3.setBackground(getResources().getDrawable(R.drawable.ansgray));
 
                 choice2.setTextColor(getResources().getColor(R.color.white));
                 choice3.setTextColor(getResources().getColor(R.color.black));
