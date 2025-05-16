@@ -31,7 +31,7 @@ public class mathwelcomepage extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mathwelcomepage.this, main.class));
+                finish();
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
