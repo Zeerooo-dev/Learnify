@@ -18,8 +18,6 @@ public class mathscore extends AppCompatActivity {
     TextView settings, home;
     TextView mthfinal_score, mthscore_comment;
 
-    ImageView homeicon, usericon;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +42,6 @@ public class mathscore extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mathscore.this, MainActivity.class));
-            }
-        });
-
-        homeicon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mathscore.this, main.class));
             }
         });
 

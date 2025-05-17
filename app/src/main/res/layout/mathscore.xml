@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".mathscore"
     android:background="@drawable/mathbackground">
+
     <include layout="@layout/toolbar"/>
 
     <ImageView
@@ -100,7 +101,5 @@
         android:text="Comment Here"
         android:textColor="@color/black"
         android:textSize="18sp" />
-
-    <include layout="@layout/footer"/>
 
 </FrameLayout>
