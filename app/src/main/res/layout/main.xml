@@ -9,6 +9,7 @@
     tools:context=".main"
     android:background="@drawable/bg_gradient">
     <include layout="@layout/toolbar"/>
+
     <ImageView
         android:layout_width="450dp"
         android:layout_height="wrap_content"

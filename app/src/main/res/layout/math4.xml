@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".math4">
+    tools:context=".math4"
+    android:background="@drawable/mathbackground">
     <include layout="@layout/toolbar"/>
 
     <TextView
@@ -14,19 +15,23 @@
         android:layout_marginTop="30dp"
         android:layout_width="370dp"
         android:layout_height="180dp"
+        android:padding="30dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
+        android:background="@drawable/questionbg"
         android:textSize="20dp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="Solve for 𝑥 \n3x−7=2x+5"/>
+
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/helvetica"
+        android:textSize="15sp"
         android:textColor="@color/black"
         android:text="Choose an Answer"/>
 
@@ -41,12 +46,14 @@
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="x=12" />
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
+            android:text="𝑥 = 12" />
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
@@ -54,12 +61,14 @@
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="x=−12" />
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
+            android:text="𝑥 = −12" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -74,37 +83,48 @@
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="x=1" />
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
+            android:text="𝑥 = 1" />
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
             />
+
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
-            android:text="x=−1" />
+            android:textSize="20sp"
+            android:text="x = −1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:gravity="center">
         <TextView
             android:id="@+id/mth_back3"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
             android:clickable="true"
-            android:text="BACK"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="15sp"
+            android:background="@drawable/btn_gradientblue"
+            android:text="◂ BACK"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -113,10 +133,17 @@
 
         <TextView
             android:id="@+id/mth_next4"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
             android:clickable="true"
-            android:text="NEXT"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="15sp"
+            android:background="@drawable/btn_gradientorange"
+            android:text="NEXT ▸"/>
+
     </LinearLayout>
 
 </LinearLayout>

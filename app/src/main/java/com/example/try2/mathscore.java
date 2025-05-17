@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class mathscore extends AppCompatActivity {
     TextView settings, home;
     TextView mthfinal_score, mthscore_comment;
+
+    ImageView homeicon, usericon;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,9 @@ public class mathscore extends AppCompatActivity {
         setContentView(R.layout.mathscore);
         home = (TextView) findViewById(R.id.home);
         settings = (TextView) findViewById(R.id.settings);
+
+//        homeicon = (ImageView) findViewById(R.id.homeicon);
+//        usericon = (ImageView) findViewById(R.id.usericon);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +47,17 @@ public class mathscore extends AppCompatActivity {
             }
         });
 
+        homeicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mathscore.this, main.class));
+            }
+        });
+
         mthfinal_score = (TextView) findViewById(R.id.mthfinal_score);
         mthscore_comment = (TextView) findViewById(R.id.mthscore_comment);
 
-        mthfinal_score.setText(String.valueOf(math.mth_score + "/5"));
+        mthfinal_score.setText(String.valueOf(math.mth_score + " / 5"));
 
         if (math.mth_score == 5){
             mthscore_comment.setText("Perfect! Too Ez 😁");

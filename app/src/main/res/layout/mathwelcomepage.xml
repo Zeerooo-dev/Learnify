@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mathbackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <include layout="@layout/toolbar"/>
 
@@ -21,6 +22,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
+        android:fontFamily="@font/helvetica"
         android:layout_marginTop="190dp"/>
 
     <Button
@@ -42,10 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
         android:layout_marginTop="100dp"
-        android:clickable="true"
         android:gravity="center"
-        android:text="MATH"
+        android:text="Math"
         android:textColor="@color/black"
         android:textSize="80dp"
+        android:fontFamily="@font/helvetica_bold"
         android:textStyle="bold" />
 </FrameLayout>
