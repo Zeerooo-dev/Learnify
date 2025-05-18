@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class english3 extends AppCompatActivity {
     TextView question, choice1,choice2, choice3, choice4, q_text, eng_next3, eng_back2;
     TextView home, settings;
@@ -37,7 +39,16 @@ public class english3 extends AppCompatActivity {
         q_text = (TextView) findViewById(R.id.q_text);
         eng_next3 = (TextView) findViewById(R.id.eng_next3);
         eng_back2 = (TextView) findViewById(R.id.eng_back2);
-
+        Random r  = new Random();
+        int x = r.nextInt(4);
+        englishwelcomepage3.three = true;
+        if(englishwelcomepage3.num == 1){
+            eng_back2.setVisibility(View.INVISIBLE);
+            eng_back2.setClickable(false);
+        }
+        if(englishwelcomepage3.num == 5){
+            eng_next3.setText("FINISH");
+        }
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,16 +130,16 @@ public class english3 extends AppCompatActivity {
                 choice3.setTextColor(getResources().getColor(R.color.white));
                 choice4.setTextColor(getResources().getColor(R.color.black));
                 q_text.setText("Correct!");
-                if (english.eng_score <= 3){
-                    english.eng_score++;
+                englishwelcomepage3.eng_score++;
 
-                }
             }
         });
 
         eng_back2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                englishwelcomepage3.num--;
+                englishwelcomepage3.three = true;
                 finish();
             }
         });
@@ -137,7 +148,32 @@ public class english3 extends AppCompatActivity {
         eng_next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(english3.this, english4.class));
+                if(englishwelcomepage3.num == 5){
+                    startActivity(new Intent(english3.this, englishscore.class));
+                }
+                else{
+                    if(x == 0 && englishwelcomepage3.one){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.one = false;
+                        startActivity(new Intent(english3.this, english.class));
+                    }
+                    else if(x == 1 && englishwelcomepage3.two){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.two = false;
+                        startActivity(new Intent(english3.this, english2.class));
+                    }
+                    else if(x == 2 && englishwelcomepage3.four){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.four = false;
+                        startActivity(new Intent(english3.this, english4.class));
+                    }
+                    else if(x == 3 && englishwelcomepage3.five){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.five = false;
+                        startActivity(new Intent(english3.this, english5.class));
+                    }
+
+                }
             }
         });
 

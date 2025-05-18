@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class english5 extends AppCompatActivity {
     TextView question, choice1,choice2, choice3, choice4, q_text, eng_next5, eng_back4;
     TextView home, settings;
@@ -37,7 +39,16 @@ public class english5 extends AppCompatActivity {
         q_text = (TextView) findViewById(R.id.q_text);
         eng_next5 = (TextView) findViewById(R.id.eng_next5);
         eng_back4 = (TextView) findViewById(R.id.eng_back4);
-
+        Random r  = new Random();
+        englishwelcomepage3.five = true;
+        int x = r.nextInt(4);
+        if(englishwelcomepage3.num == 1){
+            eng_back4.setVisibility(View.INVISIBLE);
+            eng_back4.setClickable(false);
+        }
+        if(englishwelcomepage3.num == 5){
+            eng_next5.setText("FINISH");
+        }
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,10 +96,9 @@ public class english5 extends AppCompatActivity {
                 choice3.setTextColor(getResources().getColor(R.color.white));
                 choice4.setTextColor(getResources().getColor(R.color.white));
                 q_text.setText("Correct!");
-                if (english.eng_score < 5){
-                    english.eng_score++;
+                englishwelcomepage3.eng_score++;
 
-                }
+
             }
         });
         choice3.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +138,8 @@ public class english5 extends AppCompatActivity {
         eng_back4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                englishwelcomepage3.num--;
+                englishwelcomepage3.five = true;
                 finish();
             }
         });
@@ -135,7 +147,32 @@ public class english5 extends AppCompatActivity {
         eng_next5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(english5.this, englishscore.class));
+                if(englishwelcomepage3.num == 5){
+                    startActivity(new Intent(english5.this, englishscore.class));
+                }
+                else{
+                    if(x == 0 && englishwelcomepage3.one){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.one = false;
+                        startActivity(new Intent(english5.this, english.class));
+                    }
+                    else if(x == 1 && englishwelcomepage3.two){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.two = false;
+                        startActivity(new Intent(english5.this, english2.class));
+                    }
+                    else if(x == 2 && englishwelcomepage3.three){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.three = false;
+                        startActivity(new Intent(english5.this, english3.class));
+                    }
+                    else if(x == 3 && englishwelcomepage3.four){
+                        englishwelcomepage3.num++;
+                        englishwelcomepage3.four = false;
+                        startActivity(new Intent(english5.this, english4.class));
+                    }
+
+                }
             }
         });
 

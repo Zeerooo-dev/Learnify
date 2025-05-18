@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:clickable="true"
-            android:text="FINISH"/>
+            android:text="NEXT"/>
     </LinearLayout>
 
 </LinearLayout>

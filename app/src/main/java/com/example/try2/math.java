@@ -13,7 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class math extends AppCompatActivity {
+public class    math extends AppCompatActivity {
     TextView question, choice1,choice2, choice3, choice4, q_text, mth_next1;
     TextView home, settings;
     public static int mth_score = 0;

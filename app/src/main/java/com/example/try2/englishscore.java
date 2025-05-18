@@ -43,19 +43,19 @@ public class englishscore extends AppCompatActivity {
         engfinal_score = (TextView) findViewById(R.id.engfinal_score);
         engscore_comment = (TextView) findViewById(R.id.engscore_comment);
 
-        engfinal_score.setText(String.valueOf(english.eng_score + "/5"));
+        engfinal_score.setText(String.valueOf(englishwelcomepage3.eng_score + "/5"));
 
-        if (english.eng_score == 5){
+        if (englishwelcomepage3.eng_score == 5){
             engscore_comment.setText("Perfect! Too Ez 😁");
-        }else if(english.eng_score == 4){
+        }else if(englishwelcomepage3.eng_score == 4){
             engscore_comment.setText("One more and it's perfect 😄");
-        }else if(english.eng_score == 3){
+        }else if(englishwelcomepage3.eng_score == 3){
             engscore_comment.setText("Not Bad! You’re getting there 😲");
-        }else if(english.eng_score == 2){
+        }else if(englishwelcomepage3.eng_score == 2){
             engscore_comment.setText("You’re Learning. Try again and Improve 🫤");
-        }else if(english.eng_score == 1){
+        }else if(englishwelcomepage3.eng_score == 1){
             engscore_comment.setText("Keep Going! But you MIGHT be dumb 😞");
-        }else if(english.eng_score== 0){
+        }else if(englishwelcomepage3.eng_score== 0){
             engscore_comment.setText("💀💀💀💀💀");
         }
 
