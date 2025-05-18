@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".science">
+    tools:context=".science"
+    android:background="@drawable/sciencebg">
     <include layout="@layout/toolbar"/>
 
     <TextView
@@ -16,18 +17,20 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
+        android:background="@drawable/questionbg"
         android:textSize="20dp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="What part of the cell is responsible for producing energy?
 "/>
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/helvetica"
+        android:textSize="15sp"
         android:textColor="@color/black"
         android:text="Choose an Answer"/>
 
@@ -42,11 +45,13 @@
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Nucleus" />
         <View
             android:layout_width="50dp"
@@ -55,11 +60,13 @@
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Mitochondria" />
     </LinearLayout>
     <LinearLayout
@@ -75,11 +82,13 @@
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Ribosomes" />
         <View
             android:layout_width="50dp"
@@ -88,19 +97,42 @@
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
-            android:text="Golgi apparatus" />
+            android:textSize="15sp"
+            android:text="Golgi Apparatus" />
     </LinearLayout>
-<TextView
-    android:id="@+id/sci_next1"
-    android:layout_width="wrap_content"
-    android:layout_height="48dp"
-    android:layout_gravity="right"
-    android:clickable="true"
-    android:text="NEXT"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+
+        android:id="@+id/sci_next1"
+        android:gravity="center"
+        android:layout_marginRight="35dp"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvetica_bold"
+        android:textSize="15sp"
+        android:background="@drawable/btn_gradientorange"
+        android:text="NEXT ▸"/>
+
+    </LinearLayout>
 
 </LinearLayout>

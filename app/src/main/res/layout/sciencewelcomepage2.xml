@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sciencebg"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -48,7 +49,7 @@
         android:layout_marginTop="100dp"
         android:clickable="true"
         android:gravity="center"
-        android:text="SCIENCE"
+        android:text="Science"
         android:textColor="@color/black"
         android:textSize="80dp"
         android:textStyle="bold" />
