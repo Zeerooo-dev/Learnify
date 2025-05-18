@@ -17,31 +17,32 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/questionbg"
         android:textSize="20dp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="Which gas is most responsible for the greenhouse effect?
 "/>
+
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
         android:layout_height="28dp"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica"
-        android:textSize="15sp"
+        android:gravity="center"
+        android:text="Choose an Answer"
         android:textColor="@color/black"
-        android:text="Choose an Answer"/>
+        android:textSize="15sp" />
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
+
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -118,14 +119,13 @@
             android:id="@+id/sci_back1"
             android:gravity="center"
             android:layout_marginLeft="35dp"
-            android:layout_width="85dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:clickable="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:background="@drawable/btn_gradientblue"
-            android:text="◂ BACK"/>
+            android:text="◂ Back"/>
 
 
         <Space
@@ -135,15 +135,15 @@
 
         <TextView
         android:id="@+id/sci_next2"
-            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:layout_marginRight="35dp"
-            android:layout_width="85dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="@color/white"
-            android:fontFamily="@font/helvetica_bold"
-            android:textSize="15sp"
             android:background="@drawable/btn_gradientorange"
-            android:text="NEXT ▸"/>
+            android:clickable="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
     </LinearLayout>
 </LinearLayout>

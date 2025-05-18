@@ -17,31 +17,30 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/questionbg"
         android:textSize="20dp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="What part of the cell is responsible for producing energy?
+        android:text="What part of the cell is \nresponsible for producing energy?
 "/>
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:gravity="center"
-        android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:text="Choose an Answer"/>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -121,17 +120,17 @@
 
         <TextView
 
-        android:id="@+id/sci_next1"
-        android:gravity="center"
-        android:layout_marginRight="35dp"
-        android:layout_width="85dp"
-        android:layout_height="50dp"
-        android:clickable="true"
-        android:textColor="@color/white"
-        android:fontFamily="@font/helvetica_bold"
-        android:textSize="15sp"
-        android:background="@drawable/btn_gradientorange"
-        android:text="NEXT ▸"/>
+            android:id="@+id/sci_next1"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_gradientorange"
+            android:clickable="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
 
     </LinearLayout>
 
