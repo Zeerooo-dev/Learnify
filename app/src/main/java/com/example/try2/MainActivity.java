@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     EditText editTextTextEmailAddress, editTextPassword;
     Button login_btn;
+    TextView testbtn;
 
     String user_pass = "admin123";
     String user_email = "admin";
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextTextEmailAddress = (EditText) findViewById(R.id.editTextTextEmailAddress);
         login_btn = (Button) findViewById(R.id.login_btn);
-
+        testbtn = (TextView) findViewById(R.id.testbtn);
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                 }
+            }
+        });
+        testbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, main.class));
             }
         });
 
