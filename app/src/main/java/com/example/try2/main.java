@@ -31,13 +31,20 @@ public class main extends AppCompatActivity {
         l_math = (Button) findViewById(R.id.l_math);
         l_science = (Button) findViewById(R.id.l_science);
 
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(main.this, main.class));
+            }
+
+        });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(main.this, MainActivity.class));
             }
         });
-
 
 
         l_science.setOnClickListener(new View.OnClickListener() {

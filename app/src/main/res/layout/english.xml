@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root LinearLayout for the English quiz screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,9 +9,12 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".english"
-    >
-    <include layout="@layout/toolbar"/>
+    android:background="@drawable/englishbg">
 
+    <!-- Include custom toolbar layout -->
+    <include layout="@layout/toolbar" />
+
+    <!-- Question container with styled background -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -17,91 +22,134 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
-        android:textSize="20dp"
+        android:layout_marginBottom="50dp"
+        android:padding="25dp"
+        android:background="@drawable/questionbg"
+        android:textSize="20sp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="Which sentence uses the correct form of the verb?"/>
+        android:text="Which sentence uses the correct form of the verb?" />
+
+    <!-- Subheading prompting user to choose an answer -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
         android:gravity="center"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/helvetica"
+        android:textSize="15sp"
         android:textColor="@color/black"
-        android:text="Choose an Answer"/>
+        android:text="Choose an Answer" />
 
+    <!-- First row of choices -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
+        <!-- First choice with red background -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="She goes to school every day.
-" />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She goes to school every day." />
+
+        <!-- Space between first and second choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Second choice with green background -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
             android:text="She go to school every day." />
+
     </LinearLayout>
+
+    <!-- Second row of choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Third choice with yellow background -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
             android:text="She going to school every day" />
+
+        <!-- Space between third and fourth choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Fourth choice with blue background -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
+            android:textSize="15sp"
             android:text="She gone to school every day." />
+
     </LinearLayout>
-    <TextView
-        android:id="@+id/eng_next1"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_gravity="right"
-        android:clickable="true"
-        android:text="NEXT"/>
+
+    <!-- Navigation bar with "Next" button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Spacer for layout balancing -->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- "Next" button to proceed to next question -->
+        <TextView
+            android:id="@+id/eng_next1"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/btn_gradientorange"
+            android:clickable="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

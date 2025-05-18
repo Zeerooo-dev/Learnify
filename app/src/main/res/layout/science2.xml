@@ -8,8 +8,11 @@
     android:layout_gravity="center"
     tools:context=".science2"
     android:background="@drawable/sciencebg">
+
+    <!-- Include the common toolbar layout -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Question TextView displaying the quiz question -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -22,9 +25,9 @@
         android:textSize="20dp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="Which gas is most responsible for the greenhouse effect?
-"/>
+        android:text="Which gas is most responsible for the greenhouse effect?" />
 
+    <!-- Instruction TextView prompting user to choose an answer -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -35,6 +38,7 @@
         android:textColor="@color/black"
         android:textSize="15sp" />
 
+    <!-- First row containing two answer choices -->
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
@@ -42,7 +46,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
-
+        <!-- Choice 1: Oxygen -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -54,10 +58,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="Oxygen" />
+
+        <!-- Spacer between answer choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Choice 2: Nitrogen -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -70,18 +77,17 @@
             android:textSize="20sp"
             android:text="Nitrogen" />
     </LinearLayout>
+
+    <!-- Second row containing two more answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Choice 3: Carbon Dioxide -->
         <TextView
-
             android:id="@+id/choice3"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -92,10 +98,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="15sp"
             android:text="Carbon Dioxide" />
+
+        <!-- Spacer between answer choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Choice 4: Hydrogen -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -109,12 +118,14 @@
             android:text="Hydrogen" />
     </LinearLayout>
 
+    <!-- Bottom navigation container for Back and Next buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Back button to return to previous screen/question -->
         <TextView
             android:id="@+id/sci_back1"
             android:gravity="center"
@@ -125,16 +136,17 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:text="◂ Back"/>
+            android:text="◂ Back" />
 
-
+        <!-- Spacer pushes the Next button to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next button to proceed to next question -->
         <TextView
-        android:id="@+id/sci_next2"
+            android:id="@+id/sci_next2"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_marginRight="35dp"
@@ -144,6 +156,6 @@
             android:gravity="center"
             android:text="Next ▸"
             android:textColor="@color/white"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

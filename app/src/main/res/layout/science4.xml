@@ -9,8 +9,10 @@
     tools:context=".science4"
     android:background="@drawable/sciencebg">
 
-    <include layout="@layout/toolbar"/>
+    <!-- Toolbar (included from a reusable layout file) -->
+    <include layout="@layout/toolbar" />
 
+    <!-- Question text: displays the quiz question -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -24,8 +26,9 @@
         android:padding="20dp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="In which layer of Earth's atmosphere does weather occur?"/>
+        android:text="In which layer of Earth's atmosphere does weather occur?" />
 
+    <!-- Instruction to the user -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -34,8 +37,9 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:text="Choose an Answer"/>
+        android:text="Choose an Answer" />
 
+    <!-- First row of answer choices -->
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
@@ -43,6 +47,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
+        <!-- Choice 1: Stratosphere -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -55,10 +60,12 @@
             android:textSize="20sp"
             android:text="Stratosphere" />
 
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp" />
 
+        <!-- Choice 2: Thermosphere -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -72,6 +79,7 @@
             android:text="Thermosphere" />
     </LinearLayout>
 
+    <!-- Second row of answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,6 +87,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
 
+        <!-- Choice 3: Troposphere (Correct answer) -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -89,12 +98,14 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
-            android:text="Troposphere"/>
+            android:text="Troposphere" />
 
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp" />
 
+        <!-- Choice 4: Mesosphere -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -106,15 +117,16 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:text="Mesosphere" />
-
     </LinearLayout>
 
+    <!-- Navigation controls: Back and Next buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Back button -->
         <TextView
             android:id="@+id/sci_back3"
             android:gravity="center"
@@ -125,12 +137,15 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:text="◂ Back"/>
+            android:text="◂ Back" />
+
+        <!-- Spacer to push Next button to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next button -->
         <TextView
             android:id="@+id/sci_next4"
             android:layout_width="100dp"
@@ -142,8 +157,7 @@
             android:gravity="center"
             android:text="Next ▸"
             android:textColor="@color/white"
-            android:textSize="15sp"/>
-
+            android:textSize="15sp" />
     </LinearLayout>
 
 </LinearLayout>

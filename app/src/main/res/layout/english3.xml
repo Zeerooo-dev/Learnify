@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root container for the indirect speech question screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,9 +8,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".english3">
-    <include layout="@layout/toolbar"/>
+    tools:context=".english3"
+    android:background="@drawable/englishbg">
 
+    <!-- Reusable toolbar -->
+    <include layout="@layout/toolbar" />
+
+    <!-- Question prompt -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -16,107 +22,146 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/questionbg"
         android:textSize="20dp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="Choose the correct indirect speech form:"/>
+        android:text="Choose the correct \nindirect speech form:" />
+
+    <!-- Instruction text -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/helvetica"
         android:gravity="center"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:text="Choose an Answer"
         android:textColor="@color/black"
-        android:text="Choose an Answer"/>
+        android:textSize="15sp" />
 
+    <!-- First row of answer options -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
+        <!-- Option A: Incorrect -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="She said she is tired." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She said \nshe is tired." />
+
+        <!-- Spacer -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Option B: Incorrect -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="She said she were tired." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She said \nshe were tired." />
+
     </LinearLayout>
+
+    <!-- Second row of answer options -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Option C: Incorrect (wrong subject) -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="She said that I was tired." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She said \nthat I was tired." />
+
+        <!-- Spacer -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Option D: Correct answer -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
-            android:text="She said that she was tired." />
+            android:textSize="15sp"
+            android:text="She said that \nshe was tired." />
+
     </LinearLayout>
+
+    <!-- Navigation row: Back and Next -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:gravity="center"
         android:orientation="horizontal">
+
+        <!-- Back Button -->
         <TextView
             android:id="@+id/eng_back2"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:clickable="true"
-            android:text="BACK"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="15sp"
+            android:text="◂ Back" />
 
+        <!-- Spacer to push Next to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next Button -->
         <TextView
             android:id="@+id/eng_next3"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_gradientorange"
             android:clickable="true"
-            android:text="NEXT"/>
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
     </LinearLayout>
 
 </LinearLayout>

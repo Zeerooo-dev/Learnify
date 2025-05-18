@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +9,11 @@
     android:layout_gravity="center"
     tools:context=".math"
     android:background="@drawable/mathbackground">
+
+    <!-- Toolbar included at the top -->
     <include layout="@layout/toolbar"/>
 
-
+    <!-- Question display area -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -18,29 +21,34 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:padding="25dp"
         android:background="@drawable/questionbg"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="Solve the following equation. \n\n2x + 3y = 13\n5x - y = 7"/>
+
+    <!-- Label for answer choices -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:gravity="center"
-        android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:text="Choose An Answer"/>
 
+    <!-- First row of answer choices -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
 
+        <!-- Choice 1 -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -53,10 +61,12 @@
             android:textSize="20sp"
             android:text="x = 1\ny = 4" />
 
+        <!-- Horizontal spacer between choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"/>
 
+        <!-- Choice 2 -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -70,16 +80,16 @@
             android:text="x = 2\ny = 3"/>
 
     </LinearLayout>
+
+    <!-- Second row of answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Choice 3 -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -91,11 +101,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="x = 3\ny = 2" />
+
+        <!-- Horizontal spacer -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
 
+        <!-- Choice 4 -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -107,32 +119,35 @@
             android:text="x = 4\ny = 1"
             android:textColor="@color/white"
             android:textSize="20sp" />
+
     </LinearLayout>
 
+    <!-- Bottom navigation with Next button -->
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Spacer pushes button to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
+        <!-- Next button -->
         <TextView
             android:id="@+id/mth_next1"
-            android:gravity="center"
-            android:layout_marginRight="35dp"
-            android:layout_width="85dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="@color/white"
-            android:fontFamily="@font/helvetica_bold"
-            android:textSize="15sp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="35dp"
             android:background="@drawable/btn_gradientorange"
-            android:text="NEXT ▸"/>
+            android:clickable="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
     </LinearLayout>
 
 </LinearLayout>

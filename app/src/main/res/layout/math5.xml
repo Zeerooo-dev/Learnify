@@ -9,41 +9,45 @@
     tools:context=".math5"
     android:background="@drawable/mathbackground">
 
+    <!-- Include toolbar layout -->
     <include layout="@layout/toolbar"/>
 
+    <!-- TextView showing the math question -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
         android:layout_width="370dp"
         android:layout_height="180dp"
-        android:padding="30dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:padding="25dp"
         android:background="@drawable/questionbg"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="A triangle has angles in the ratio 2:3:4. What is the measure of the largest angle?
-"/>
+        android:text="A triangle has angles in the ratio 2:3:4. What is the measure of the largest angle?"/>
+
+    <!-- Instruction to choose an answer -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:gravity="center"
-        android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:text="Choose an Answer"/>
 
+    <!-- First row with two answer choices -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
+        <!-- First choice with red background -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -55,10 +59,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="40°" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Second choice with green background -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -71,16 +78,16 @@
             android:textSize="20sp"
             android:text="80°" />
     </LinearLayout>
+
+    <!-- Second row with two more answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Third choice with yellow background -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -92,10 +99,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="100°" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"/>
 
+        <!-- Fourth choice with blue background -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -109,42 +119,46 @@
             android:text="90°" />
 
     </LinearLayout>
+
+    <!-- Bottom navigation layout with Back and Finish buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
         android:gravity="center">
 
+        <!-- Back button -->
         <TextView
             android:id="@+id/mth_back4"
             android:gravity="center"
-            android:layout_marginLeft="30dp"
-            android:layout_width="85dp"
-            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:clickable="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:background="@drawable/btn_gradientblue"
-            android:text="◂ BACK"/>
+            android:text="◂ Back"/>
 
+        <!-- Flexible space between buttons -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Finish button -->
         <TextView
             android:id="@+id/mth_next5"
-            android:gravity="center"
-            android:layout_marginRight="30dp"
-            android:layout_width="85dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="@color/white"
-            android:fontFamily="@font/helvetica_bold"
-            android:textSize="15sp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="35dp"
             android:background="@drawable/btn_gradientorange"
-            android:text="NEXT ▸"/>
+            android:clickable="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Finish ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
 
     </LinearLayout>
 

@@ -9,8 +9,10 @@
     tools:context=".science5"
     android:background="@drawable/sciencebg">
 
+    <!-- Toolbar layout reused across screens -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Question text displayed to the user -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -26,6 +28,7 @@
         android:textColor="@color/black"
         android:text="What organ in the human body regulates blood sugar by producing insulin?"/>
 
+    <!-- Instruction label -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -36,6 +39,7 @@
         android:textSize="15sp"
         android:text="Choose an Answer"/>
 
+    <!-- First row of answer options -->
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
@@ -43,6 +47,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
+        <!-- Option: Liver -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -55,10 +60,12 @@
             android:textSize="20sp"
             android:text="Liver" />
 
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp" />
 
+        <!-- Option: Kidney -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -70,9 +77,9 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="Kidney" />
-
     </LinearLayout>
 
+    <!-- Second row of answer options -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,6 +87,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
 
+        <!-- Option: Pancreas (Correct Answer) -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -91,10 +99,13 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="Pancreas" />
+
+        <!-- Spacer -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp" />
 
+        <!-- Option: Spleen -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -106,15 +117,16 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:text="Spleen" />
-
     </LinearLayout>
 
+    <!-- Navigation buttons: Back and Finish -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Back button -->
         <TextView
             android:id="@+id/sci_back4"
             android:gravity="center"
@@ -125,13 +137,15 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:text="◂ Back"/>
+            android:text="◂ Back" />
 
+        <!-- Spacer to push Finish button to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Finish button -->
         <TextView
             android:id="@+id/sci_next5"
             android:layout_width="100dp"
@@ -141,10 +155,9 @@
             android:clickable="true"
             android:fontFamily="@font/helvetica_bold"
             android:gravity="center"
-            android:text="Next ▸"
+            android:text="Finish ▸"
             android:textColor="@color/white"
             android:textSize="15sp"/>
-
     </LinearLayout>
 
 </LinearLayout>

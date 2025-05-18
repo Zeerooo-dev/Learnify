@@ -5,18 +5,17 @@
     android:background="@drawable/sciencebg"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
-
+    <!-- Toolbar include -->
     <include layout="@layout/toolbar"/>
 
-
+    <!-- Main quiz icon in the center -->
     <ImageView
         android:layout_width="337dp"
         android:layout_height="282dp"
         android:layout_gravity="center"
         android:src="@drawable/scienceicon" />
 
+    <!-- Subtitle text below the icon -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +27,7 @@
         android:gravity="center"
         android:layout_marginTop="190dp"/>
 
+    <!-- Start quiz button at the bottom -->
     <Button
         android:id="@+id/sci_startbtn"
         android:layout_width="158dp"
@@ -40,8 +40,7 @@
         android:textStyle="bold"
         android:textColor="@color/white" />
 
-
-
+    <!-- Quiz title at the top center -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,4 +52,5 @@
         android:textColor="@color/black"
         android:textSize="80dp"
         android:textStyle="bold" />
+
 </FrameLayout>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root FrameLayout that contains all the UI elements -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,12 +11,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Decorative image shape at the bottom center -->
     <ImageView
         android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:src="@drawable/loginshape" />
 
+    <!-- Logo image at the top center -->
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -22,6 +26,7 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/logo2" />
 
+    <!-- "Login" header text -->
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
@@ -34,6 +39,7 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
+    <!-- Welcome message below the Login header -->
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
@@ -45,6 +51,7 @@
         android:textColor="@color/black"
         android:textSize="15dp" />
 
+    <!-- CardView containing login form fields -->
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
         android:layout_height="290dp"
@@ -52,13 +59,14 @@
         android:layout_marginTop="60dp"
         app:cardCornerRadius="30dp">
 
+        <!-- Vertical layout for form elements -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical">
 
-
+            <!-- Username label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,9 +76,9 @@
                 android:textSize="12sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:paddingBottom="5dp"/>
+                android:paddingBottom="5dp" />
 
-
+            <!-- Username input field -->
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
                 android:layout_width="250dp"
@@ -81,15 +89,14 @@
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 android:textSize="10dp"
-                android:elevation="5dp"/>
+                android:elevation="5dp" />
 
-
-
-
+            <!-- Spacer between username and password fields -->
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
+            <!-- Password label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,8 +106,9 @@
                 android:textSize="12sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:paddingBottom="5dp"/>
+                android:paddingBottom="5dp" />
 
+            <!-- Password input field -->
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
@@ -111,8 +119,9 @@
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textSize="10dp"
-                android:elevation="5dp"/>
+                android:elevation="5dp" />
 
+            <!-- "Forgot Password?" link -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -122,7 +131,7 @@
                 android:textColor="@color/red"
                 android:textSize="10dp" />
 
-
+            <!-- Login button -->
             <Button
                 android:id="@+id/login_btn"
                 android:layout_width="wrap_content"
@@ -136,6 +145,7 @@
 
     </androidx.cardview.widget.CardView>
 
+    <!-- Prompt text asking if user has an account -->
     <TextView
         android:id="@+id/DontHaveAccount"
         android:layout_width="wrap_content"
@@ -148,6 +158,7 @@
         android:textSize="12sp"
         android:textStyle="bold" />
 
+    <!-- Sign-up link below the prompt -->
     <TextView
         android:id="@+id/SignUpLink"
         android:layout_width="wrap_content"

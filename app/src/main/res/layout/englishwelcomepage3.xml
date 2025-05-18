@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include layout="@layout/toolbar"/>
+    android:background="@drawable/englishbg">
 
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar" />
 
+    <!-- Centered English icon -->
     <ImageView
         android:layout_width="337dp"
         android:layout_height="282dp"
         android:layout_gravity="center"
         android:src="@drawable/englishicon" />
 
+    <!-- "Let's Start the Quiz!" text below icon -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,6 +27,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!-- Start Quiz button at bottom center -->
     <Button
         android:id="@+id/eng_startbtn"
         android:layout_width="158dp"
@@ -35,8 +40,7 @@
         android:textStyle="bold"
         android:textColor="@color/white" />
 
-
-
+    <!-- Large "English" text at top center -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,8 +48,9 @@
         android:layout_marginTop="100dp"
         android:clickable="true"
         android:gravity="center"
-        android:text="ENGLISH"
+        android:text="English"
         android:textColor="@color/black"
         android:textSize="80dp"
         android:textStyle="bold" />
+
 </FrameLayout>

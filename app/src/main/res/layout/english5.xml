@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for question: Identify future tense sentence -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,9 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".english5">
-    <include layout="@layout/toolbar"/>
+    tools:context=".english5"
+    android:background="@drawable/englishbg">
 
+    <!-- Toolbar include -->
+    <include layout="@layout/toolbar" />
+
+    <!-- Question text -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -16,96 +21,118 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
-        android:textSize="20dp"
+        android:padding="25dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/questionbg"
+        android:textSize="17dp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="Which sentence is in the future tense?
-"/>
+        android:text="Which sentence is in the future tense?" />
+
+    <!-- Instruction text -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/helvetica"
         android:gravity="center"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="Choose an Answer"/>
+        android:text="Choose an Answer" />
 
+    <!-- First row of answer choices -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
-            android:text="She walks to school." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She walks \nto school." />
+
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="She will walk to school." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She will \nwalk to school." />
+
     </LinearLayout>
+
+    <!-- Second row of answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
-
-
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
-            android:text="She walked to school." />
+            android:fontFamily="@font/helvetica"
+            android:textSize="15sp"
+            android:text="She walked \nto school." />
+
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
+            android:textSize="15sp"
             android:text="She is walking to school." />
+
     </LinearLayout>
+
+    <!-- Navigation bar: Back and Finish -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:gravity="center"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/eng_back4"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:clickable="true"
-            android:text="BACK"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="15sp"
+            android:text="◂ Back" />
 
         <Space
             android:layout_width="wrap_content"
@@ -114,10 +141,17 @@
 
         <TextView
             android:id="@+id/eng_next5"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_gradientorange"
             android:clickable="true"
-            android:text="FINISH"/>
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Finish ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
     </LinearLayout>
 
 </LinearLayout>

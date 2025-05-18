@@ -9,14 +9,17 @@
     tools:context=".sciencescore"
     android:background="@drawable/sciencebg">
 
+    <!-- Toolbar -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Decorative background shape at the bottom -->
     <ImageView
         android:layout_width="600dp"
         android:layout_height="150dp"
         android:src="@drawable/blueshape"
         android:layout_gravity="bottom|center"/>
 
+    <!-- Confetti image for celebration -->
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -24,6 +27,7 @@
         android:layout_marginBottom="170dp"
         android:src="@drawable/confetti"/>
 
+    <!-- Trophy image at the center -->
     <ImageView
         android:layout_width="200dp"
         android:layout_gravity="center"
@@ -31,22 +35,23 @@
         android:layout_marginBottom="170dp"
         android:src="@drawable/trophy"/>
 
+    <!-- Congratulations text and quiz completion message -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center_vertical"
         android:layout_marginTop="15dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:fontFamily="@font/helvetica_bold"
-        android:textSize="40sp"
-        android:text="Congratulations!" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="40sp"
+            android:text="Congratulations!" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,10 +62,11 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica"
             android:textSize="17dp"
-            android:text="You have finished the Math Quiz!"/>
+            android:text="You have finished the Science Quiz!"/> <!-- Fixed from Math Quiz to Science Quiz -->
 
     </FrameLayout>
 
+    <!-- Label for the score -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,6 +78,7 @@
         android:textSize="19sp"
         android:text="You scored:" />
 
+    <!-- Final score display -->
     <TextView
         android:id="@+id/final_score"
         android:layout_width="250dp"
@@ -85,6 +92,7 @@
         android:background="@drawable/btn_gradientblue"
         android:textColor="@color/white" />
 
+    <!-- Optional comment on score performance -->
     <TextView
         android:id="@+id/score_comment"
         android:layout_width="match_parent"

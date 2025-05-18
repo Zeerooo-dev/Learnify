@@ -4,51 +4,56 @@
     android:layout_width="match_parent"
     android:layout_height="60dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <!-- Main horizontal toolbar container with background gradient -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        android:orientation="horizontal">
+
+        <!-- Logo image on the left -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/logo1"/>
+
+        <!-- Spacer to push menu items to the right -->
+        <Space
+            android:layout_width="150dp"
+            android:layout_height="match_parent"/>
+
+        <!-- 'Home' clickable text -->
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_gradient"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
+        <!-- Small space between buttons -->
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
 
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="start|center"
-                android:src="@drawable/logo1"/>
+        <!-- 'Log Out' clickable text -->
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:clickable="true"
+            android:padding="5dp"
+            android:text="Log Out"/>
 
-            <Space
-                android:layout_width="150dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="Home"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <Space
-                android:layout_width="15dp"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:id="@+id/settings"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:clickable="true"
-                android:padding="5dp"
-                android:text="Log Out"/>
-
-        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

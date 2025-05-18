@@ -4,15 +4,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/mathbackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Include toolbar layout -->
     <include layout="@layout/toolbar"/>
 
-
+    <!-- Centered math icon image -->
     <ImageView
         android:layout_width="337dp"
         android:layout_height="282dp"
         android:layout_gravity="center"
         android:src="@drawable/mathicon" />
 
+    <!-- Centered text below the image -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +28,7 @@
         android:fontFamily="@font/helvetica"
         android:layout_marginTop="190dp"/>
 
+    <!-- Start Quiz button fixed near bottom center -->
     <Button
         android:id="@+id/mth_startbtn"
         android:layout_width="158dp"
@@ -37,8 +41,7 @@
         android:textStyle="bold"
         android:textColor="@color/white" />
 
-
-
+    <!-- Large "Math" text at the top center -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

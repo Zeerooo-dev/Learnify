@@ -9,8 +9,10 @@
     tools:context=".science3"
     android:background="@drawable/sciencebg">
 
+    <!-- Include the common toolbar layout -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Question TextView displaying the quiz question -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -25,7 +27,9 @@
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="What type of bond involves the sharing of electron pairs between atoms?
-"/>
+" />
+
+    <!-- Instruction TextView prompting user to choose an answer -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -34,8 +38,9 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:text="Choose an Answer"/>
+        android:text="Choose an Answer" />
 
+    <!-- First row containing two answer choices -->
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
@@ -43,6 +48,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
+        <!-- Choice 1: Ionic bond -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -55,10 +61,12 @@
             android:textSize="20sp"
             android:text="Ionic bond" />
 
+        <!-- Spacer between answer choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp" />
 
+        <!-- Choice 2: Metallic bond -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -72,14 +80,15 @@
             android:text="Metallic bond" />
     </LinearLayout>
 
+    <!-- Second row containing two more answer choices -->
     <LinearLayout
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
 
+        <!-- Choice 3: Hydrogen bond -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -92,10 +101,12 @@
             android:textSize="15sp"
             android:text="Hydrogen bond" />
 
+        <!-- Spacer between answer choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp" />
 
+        <!-- Choice 4: Covalent bond -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -110,12 +121,14 @@
 
     </LinearLayout>
 
+    <!-- Bottom navigation container for Back and Next buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Back button to return to previous screen/question -->
         <TextView
             android:id="@+id/sci_back2"
             android:gravity="center"
@@ -126,13 +139,15 @@
             android:textColor="@color/black"
             android:fontFamily="@font/helvetica_bold"
             android:textSize="15sp"
-            android:text="◂ Back"/>
+            android:text="◂ Back" />
 
+        <!-- Spacer pushes the Next button to the right -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next button to proceed to next question -->
         <TextView
             android:id="@+id/sci_next3"
             android:layout_width="100dp"
@@ -144,7 +159,7 @@
             android:gravity="center"
             android:text="Next ▸"
             android:textColor="@color/white"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
     </LinearLayout>
 
 </LinearLayout>

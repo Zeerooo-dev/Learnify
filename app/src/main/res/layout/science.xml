@@ -8,8 +8,11 @@
     android:layout_gravity="center"
     tools:context=".science"
     android:background="@drawable/sciencebg">
+
+    <!-- Include the toolbar layout -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Question TextView displaying the quiz question -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -19,11 +22,13 @@
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
         android:background="@drawable/questionbg"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
         android:text="What part of the cell is \nresponsible for producing energy?
 "/>
+
+    <!-- Instructional TextView prompting user to choose an answer -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
@@ -34,6 +39,7 @@
         android:textColor="@color/black"
         android:text="Choose an Answer"/>
 
+    <!-- First row of answer choices -->
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
@@ -41,6 +47,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
 
+        <!-- Choice 1 -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
@@ -52,10 +59,14 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="Nucleus" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
             />
+
+        <!-- Choice 2 -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
@@ -68,16 +79,16 @@
             android:textSize="20sp"
             android:text="Mitochondria" />
     </LinearLayout>
+
+    <!-- Second row of answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Choice 3 -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
@@ -89,10 +100,14 @@
             android:fontFamily="@font/helvetica"
             android:textSize="20sp"
             android:text="Ribosomes" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
             android:layout_height="0dp"
             />
+
+        <!-- Choice 4 -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
@@ -106,20 +121,21 @@
             android:text="Golgi Apparatus" />
     </LinearLayout>
 
+    <!-- Container for the Next button -->
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Spacer to push the button rightwards -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next button to proceed to next question -->
         <TextView
-
             android:id="@+id/sci_next1"
             android:layout_width="100dp"
             android:layout_height="35dp"

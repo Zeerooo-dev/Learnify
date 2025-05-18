@@ -9,14 +9,17 @@
     tools:context=".mathscore"
     android:background="@drawable/mathbackground">
 
+    <!-- Include toolbar layout -->
     <include layout="@layout/toolbar"/>
 
+    <!-- Bottom red shape decoration -->
     <ImageView
         android:layout_width="600dp"
         android:layout_height="150dp"
         android:src="@drawable/redshape"
         android:layout_gravity="bottom|center"/>
 
+    <!-- Confetti image centered with margin at bottom -->
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -24,7 +27,7 @@
         android:layout_marginBottom="170dp"
         android:src="@drawable/confetti"/>
 
-
+    <!-- Trophy image centered with margin at bottom -->
     <ImageView
         android:layout_width="200dp"
         android:layout_gravity="center"
@@ -32,13 +35,14 @@
         android:layout_marginBottom="170dp"
         android:src="@drawable/trophy"/>
 
+    <!-- Text container with congratulatory messages -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center_vertical"
         android:layout_marginTop="15dp">
 
-
+        <!-- Large "Congratulations!" text -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,6 +54,7 @@
             android:textSize="40sp"
             android:text="Congratulations!"/>
 
+        <!-- Smaller message below congratulations -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +68,7 @@
 
     </FrameLayout>
 
-
+    <!-- Label "You scored:" centered below messages -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,6 +80,7 @@
         android:textSize="19sp"
         android:text="You scored:" />
 
+    <!-- Score display with background gradient -->
     <TextView
         android:id="@+id/mthfinal_score"
         android:layout_width="250dp"
@@ -85,9 +91,10 @@
         android:textSize="50sp"
         android:fontFamily="@font/helvetica_bold"
         android:text="0 / 5"
-        android:background="@drawable/btn_gradientorange"
+        android:background="@drawable/btn_gradientred"
         android:textColor="@color/white" />
 
+    <!-- Comment section centered with margin -->
     <TextView
         android:id="@+id/mthscore_comment"
         android:layout_width="match_parent"

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root LinearLayout for the synonym quiz screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,9 +8,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".english2">
-    <include layout="@layout/toolbar"/>
+    tools:context=".english2"
+    android:background="@drawable/englishbg">
 
+    <!-- Toolbar include -->
+    <include layout="@layout/toolbar" />
+
+    <!-- Main question display -->
     <TextView
         android:id="@+id/question"
         android:layout_marginTop="30dp"
@@ -16,107 +22,146 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@drawable/border"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/questionbg"
         android:textSize="20dp"
+        android:fontFamily="@font/helvetica"
         android:textColor="@color/black"
-        android:text="What is the synonym of the word GENEROUS"/>
+        android:text="What is the synonym of the word GENEROUS" />
+
+    <!-- Instruction to user -->
     <TextView
         android:id="@+id/q_text"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/helvetica"
         android:gravity="center"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:text="Choose an Answer"
         android:textColor="@color/black"
-        android:text="Choose an Answer"/>
+        android:textSize="15sp" />
 
+    <!-- First row of answer choices -->
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:layout_gravity="center">
 
-        >
+        <!-- Incorrect choice: Mean -->
         <TextView
             android:id="@+id/choice1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c1"
+            android:background="@drawable/qredbg"
             android:clickable="true"
             android:textColor="@color/white"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Mean" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Incorrect choice: Selfish -->
         <TextView
             android:id="@+id/choice2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c2"
+            android:background="@drawable/qgreenbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Selfish" />
+
     </LinearLayout>
+
+    <!-- Second row of answer choices -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
-
-
+        <!-- Correct choice: Kind -->
         <TextView
             android:id="@+id/choice3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:background="@drawable/c3"
+            android:background="@drawable/qyellowbg"
             android:clickable="true"
             android:textColor="@color/black"
+            android:fontFamily="@font/helvetica"
+            android:textSize="20sp"
             android:text="Kind" />
+
+        <!-- Spacer between choices -->
         <View
             android:layout_width="50dp"
-            android:layout_height="0dp"
-            />
+            android:layout_height="0dp" />
+
+        <!-- Incorrect choice: Rude -->
         <TextView
             android:id="@+id/choice4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:background="@drawable/c4"
+            android:layout_height="100dp"
+            android:background="@drawable/qbluebg"
             android:clickable="true"
+            android:fontFamily="@font/helvetica"
+            android:gravity="center"
             android:textColor="@color/white"
+            android:textSize="20sp"
             android:text="Rude" />
+
     </LinearLayout>
+
+    <!-- Navigation controls: Back and Next -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:gravity="center"
         android:orientation="horizontal">
+
+        <!-- Back button -->
         <TextView
             android:id="@+id/eng_back1"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
             android:clickable="true"
-            android:text="BACK"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="15sp"
+            android:text="◂ Back" />
 
+        <!-- Spacer -->
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <!-- Next button -->
         <TextView
             android:id="@+id/eng_next2"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_gradientorange"
             android:clickable="true"
-            android:text="NEXT"/>
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center"
+            android:text="Next ▸"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
     </LinearLayout>
 
 </LinearLayout>
