@@ -37,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editTextTextEmailAddress.getText().toString().isEmpty()){
+                if(editTextTextEmailAddress.getText().toString().trim().isEmpty()){
                     editTextTextEmailAddress.setError("This field cannot be empty");
 
-                }if (editTextPassword.getText().toString().isEmpty()) {
+                }if (editTextPassword.getText().toString().trim().isEmpty()) {
                     editTextPassword.setError("This field cannot be empty");
 
                     }else {
-                        if(editTextTextEmailAddress.getText().toString().equals(user_email)&&editTextPassword.getText().toString().equals(user_pass)){
+                        if(editTextTextEmailAddress.getText().toString().trim().equals(user_email)&&editTextPassword.getText().toString().trim().equals(user_pass)){
                             Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(MainActivity.this, main.class));
                         }else {
